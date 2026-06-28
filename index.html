@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三笠商行 | MIKASA SHOKO</title>
+<meta name="description" content="三笠商行は、からだにいいものから上質な家具まで、清潔感とナチュラルな上品さをお届けする商社です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f4ee;
+    --bg-soft:#efe9df;
+    --ink:#2c2a26;
+    --ink-soft:#5c574e;
+    --line:#d8d0c2;
+    --gold:#a98c5a;
+    --green:#7a8669;
+    --white:#fffefb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    font-weight:300;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"Shippori Mincho",serif;}
+  .en{font-family:"Cormorant Garamond",serif;letter-spacing:.08em;}
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 48px;
+    background:rgba(247,244,238,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:.4s;
+  }
+  header.scrolled{border-bottom:1px solid var(--line);padding:16px 48px;}
+  .logo{font-family:"Shippori Mincho",serif;font-size:1.35rem;font-weight:600;letter-spacing:.18em;}
+  .logo small{display:block;font-size:.55rem;letter-spacing:.4em;color:var(--gold);margin-top:2px;font-family:"Cormorant Garamond",serif;}
+  nav ul{display:flex;gap:38px;list-style:none}
+  nav a{text-decoration:none;color:var(--ink-soft);font-size:.82rem;letter-spacing:.12em;transition:.3s;position:relative}
+  nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.3s}
+  nav a:hover{color:var(--ink)}
+  nav a:hover::after{width:100%}
+  .menu-btn{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--ink)}
+
+  /* Hero */
+  .hero{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 50% 30%,rgba(169,140,90,0.06),transparent 60%),
+      linear-gradient(180deg,var(--bg) 0%,var(--bg-soft) 100%);
+  }
+  .hero .mark{font-size:.7rem;letter-spacing:.6em;color:var(--gold);margin-bottom:30px;text-transform:uppercase}
+  .hero h1{
+    font-family:"Shippori Mincho",serif;font-weight:500;
+    font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.4;letter-spacing:.1em;
+  }
+  .hero h1 .accent{color:var(--gold)}
+  .hero p{margin-top:34px;color:var(--ink-soft);font-size:clamp(.9rem,2vw,1.05rem);letter-spacing:.08em;max-width:34em}
+  .hero .scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);font-size:.6rem;letter-spacing:.3em;color:var(--ink-soft);writing-mode:vertical-rl}
+  .hero .scroll::after{content:"";display:block;width:1px;height:46px;background:var(--line);margin:14px auto 0}
+
+  /* Sections */
+  section{padding:120px 48px}
+  .label{font-family:"Cormorant Garamond",serif;font-size:.8rem;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .sec-title{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:.08em;margin-bottom:14px}
+  .sec-head{text-align:center;margin-bottom:70px}
+  .sec-head p{color:var(--ink-soft);font-size:.95rem;max-width:40em;margin:18px auto 0}
+
+  /* About philosophy */
+  .philosophy{background:var(--white);text-align:center}
+  .philosophy .quote{font-family:"Shippori Mincho",serif;font-size:clamp(1.4rem,3.5vw,2.1rem);font-weight:500;line-height:2;letter-spacing:.1em;max-width:24em;margin:0 auto;color:var(--ink)}
+  .philosophy .quote span{color:var(--gold)}
+  .philosophy .lead{margin-top:40px;color:var(--ink-soft);max-width:38em;margin-left:auto;margin-right:auto}
+
+  /* Business cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px;max-width:1100px;margin:0 auto}
+  .card{
+    background:var(--white);border:1px solid var(--line);padding:48px 38px;
+    transition:.45s;position:relative;overflow:hidden;
+  }
+  .card::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.45s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(44,42,38,0.07)}
+  .card:hover::before{transform:scaleX(1)}
+  .card .num{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--gold);letter-spacing:.2em}
+  .card h3{font-family:"Shippori Mincho",serif;font-weight:500;font-size:1.3rem;letter-spacing:.06em;margin:18px 0 16px}
+  .card p{color:var(--ink-soft);font-size:.9rem;line-height:1.95}
+
+  /* Company table */
+  .company{background:var(--bg-soft)}
+  .table{max-width:760px;margin:0 auto}
+  .table .row{display:flex;border-bottom:1px solid var(--line);padding:22px 8px}
+  .table .row dt{flex:0 0 180px;font-family:"Shippori Mincho",serif;letter-spacing:.1em;color:var(--ink)}
+  .table .row dd{color:var(--ink-soft);font-size:.95rem}
+  .note{text-align:center;color:var(--gold);font-size:.75rem;letter-spacing:.1em;margin-top:30px}
+
+  /* Contact */
+  .contact{background:var(--white);text-align:center}
+  .contact .sec-title{margin-bottom:24px}
+  .contact p{color:var(--ink-soft);max-width:34em;margin:0 auto 40px}
+  .btn{
+    display:inline-block;text-decoration:none;color:var(--ink);
+    border:1px solid var(--ink);padding:18px 52px;letter-spacing:.2em;font-size:.85rem;
+    transition:.4s;position:relative;
+  }
+  .btn:hover{background:var(--ink);color:var(--white)}
+  .contact .mail{display:block;margin-top:34px;font-family:"Cormorant Garamond",serif;font-size:1.3rem;letter-spacing:.1em;color:var(--ink)}
+
+  /* Footer */
+  footer{background:var(--ink);color:#cfc8bb;text-align:center;padding:60px 24px 40px}
+  footer .logo{color:var(--white);font-size:1.2rem}
+  footer .logo small{color:var(--gold)}
+  footer .links{display:flex;gap:30px;justify-content:center;margin:30px 0;list-style:none;flex-wrap:wrap}
+  footer .links a{color:#cfc8bb;text-decoration:none;font-size:.8rem;letter-spacing:.1em;transition:.3s}
+  footer .links a:hover{color:var(--white)}
+  footer .copy{font-size:.7rem;letter-spacing:.15em;color:#8a8377;margin-top:14px;font-family:"Cormorant Garamond",serif}
+
+  /* reveal anim */
+  .reveal{opacity:0;transform:translateY(24px);transition:.9s cubic-bezier(.2,.6,.2,1)}
+  .reveal.show{opacity:1;transform:none}
+
+  @media(max-width:760px){
+    header{padding:18px 22px}
+    header.scrolled{padding:14px 22px}
+    nav ul{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);
+    }
+    nav ul.open{display:flex}
+    nav li{border-top:1px solid var(--line)}
+    nav a{display:block;padding:18px 22px}
+    .menu-btn{display:block}
+    section{padding:80px 24px}
+    .table .row{flex-direction:column;gap:6px}
+    .table .row dt{flex:none}
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="logo">三笠商行<small>MIKASA SHOKO</small></div>
+  <nav>
+    <button class="menu-btn" aria-label="menu" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
+    <ul id="navlist">
+      <li><a href="#philosophy">理念</a></li>
+      <li><a href="#business">事業内容</a></li>
+      <li><a href="#company">会社概要</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="mark">Quality of Life</div>
+  <h1>からだに、暮らしに、<br><span class="accent">上質</span>をお届けする。</h1>
+  <p>健康を支える品々から、空間を彩る家具まで。三笠商行は、清潔感とナチュラルな上品さを大切に、まいにちに寄り添う商いを続けています。</p>
+  <div class="scroll en">SCROLL</div>
+</section>
+
+<section class="philosophy reveal" id="philosophy">
+  <div class="sec-head">
+    <div class="label">Philosophy</div>
+    <h2 class="sec-title">私たちの想い</h2>
+  </div>
+  <p class="quote">「いいもの」を、<span>てらいなく。</span><br>くらしに静かな豊かさを。</p>
+  <p class="lead">三笠商行は、からだにやさしいものを選び抜き、丁寧にお届けすることを使命としています。流行に流されず、ほんとうに価値あるものだけを。清潔で、上品で、自然体。その姿勢が、お客様の信頼につながると信じています。</p>
+</section>
+
+<section class="business reveal" id="business">
+  <div class="sec-head">
+    <div class="label">Business</div>
+    <h2 class="sec-title">事業内容</h2>
+    <p>多岐にわたる商いを通じて、心地よいくらしを総合的にお手伝いします。</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="num">01</div>
+      <h3>健康・自然食品</h3>
+      <p>からだにいいものを、産地や品質にこだわって厳選。日々の健康を内側から支える、安心の品々をお届けします。</p>
+    </div>
+    <div class="card">
+      <div class="num">02</div>
+      <h3>家具・インテリア</h3>
+      <p>テーブルやソファなど大型家具も取り扱い。上質な素材とナチュラルな佇まいで、空間に静かな品格を添えます。</p>
+    </div>
+    <div class="card">
+      <div class="num">03</div>
+      <h3>生活雑貨</h3>
+      <p>清潔感のある日用品から、暮らしを整える道具まで。シンプルで美しい、長く使えるものを集めています。</p>
+    </div>
+    <div class="card">
+      <div class="num">04</div>
+      <h3>卸・小売</h3>
+      <p>幅広い商材を、卸売から小売まで柔軟に対応。お取引先様のニーズに寄り添い、信頼ある商流をご提供します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="company reveal" id="company">
+  <div class="sec-head">
+    <div class="label">Company</div>
+    <h2 class="sec-title">会社概要</h2>
+  </div>
+  <dl class="table">
+    <div class="row"><dt>会社名</dt><dd>三笠商行株式会社（MIKASA SHOKO Co., Ltd.）</dd></div>
+    <div class="row"><dt>所在地</dt><dd>〒000-0000　東京都〇〇区〇〇 0-0-0</dd></div>
+    <div class="row"><dt>設立</dt><dd>2020年4月</dd></div>
+    <div class="row"><dt>代表者</dt><dd>代表取締役　〇〇 〇〇</dd></div>
+    <div class="row"><dt>事業内容</dt><dd>健康・自然食品の販売／家具・インテリアの販売／生活雑貨の卸・小売</dd></div>
+    <div class="row"><dt>電話</dt><dd>00-0000-0000</dd></div>
+    <div class="row"><dt>ウェブサイト</dt><dd>mikasa-shoko.com</dd></div>
+  </dl>
+  <p class="note">※ 会社概要は仮の内容です。正式な情報に差し替えてご利用ください。</p>
+</section>
+
+<section class="contact reveal" id="contact">
+  <div class="label">Contact</div>
+  <h2 class="sec-title">お問い合わせ</h2>
+  <p>商品・お取引に関するご相談を承っております。お気軽にご連絡ください。</p>
+  <a class="btn" href="mailto:info@mikasa-shoko.com">メールでお問い合わせ</a>
+  <a class="mail en" href="mailto:info@mikasa-shoko.com">info@mikasa-shoko.com</a>
+</section>
+
+<footer>
+  <div class="logo">三笠商行<small>MIKASA SHOKO</small></div>
+  <ul class="links">
+    <li><a href="#philosophy">理念</a></li>
+    <li><a href="#business">事業内容</a></li>
+    <li><a href="#company">会社概要</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+  <p class="copy">© 2026 MIKASA SHOKO Co., Ltd. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>40)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('#navlist a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlist').classList.remove('open')));
+</script>
+</body>
+</html>
