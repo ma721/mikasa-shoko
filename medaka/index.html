@@ -80,6 +80,12 @@
   .feat-cta{margin-top:32px;font-size:16.5px;padding:17px 46px}
   .feat-note{margin-top:12px;font-size:12.5px;color:#7a6f5c;letter-spacing:.04em}
 
+  .feat-kin{max-width:620px;margin:8px auto 0;padding-top:20px;border-top:1px solid rgba(176,138,62,.35)}
+  .feat-kin-ttl{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.08em;color:var(--c-food);margin-bottom:14px}
+  .feat-kin-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .feat-kin-imgs img{width:100%;height:auto;display:block;border:1px solid rgba(176,138,62,.4);border-radius:3px;background:#fff;box-shadow:0 4px 12px rgba(90,70,30,.1)}
+  @media(max-width:520px){.feat-kin-imgs{gap:8px}}
+
   .bignum{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;margin:26px auto 4px;padding:18px 20px;border-top:1px solid rgba(176,138,62,.4);border-bottom:1px solid rgba(176,138,62,.4);max-width:560px}
   .bignum-item{display:flex;align-items:baseline;gap:6px}
   .bignum-lead{font-family:var(--serif);font-size:18px;letter-spacing:.06em;color:var(--ink)}
@@ -189,7 +195,7 @@
       <h1 class="hero-lead">育てる人の、道具です。</h1>
       <p class="hero-sub">たくさん飼育されている方、販売されている方へ。毎日つかうものだからこそ、まとめてそろう形でご用意しました。</p>
       <div class="hero-cta">
-        <a href="#feature" class="btn btn-gold">お楽しみセットを見る</a>
+        <a href="#feature" class="btn btn-gold">お楽しみ ＆ 菌セットを見る</a>
         <a href="#items" class="btn btn-ghost">商品一覧</a>
       </div>
     </div>
@@ -201,9 +207,9 @@
       <div class="featbox">
         <span class="feat-badge">イチオシ</span>
 
-        <p class="eyebrow" style="margin-top:6px">Fun Assortment</p>
-        <h2 class="feat-ttl">めだか・金魚<br>フィッシュネット 産卵床つき<br>お楽しみセット</h2>
-        <p class="feat-lead">たくさん飼育されている方、販売されている方へ。<br>サイズ違いのフィッシュネットと産卵床を、まとめてお届けします。</p>
+        <p class="eyebrow" style="margin-top:6px">Net &amp; Microbes</p>
+        <h2 class="feat-ttl">めだか・金魚<br>フィッシュネット 産卵床つき<br>お楽しみ ＆ 菌セット</h2>
+        <p class="feat-lead">すくう道具と、水を整える菌を、ひとまとめに。<br>たくさん飼育されている方、販売されている方へ。</p>
 
         <div class="bignum">
           <span class="bignum-item">
@@ -220,13 +226,23 @@
         </div>
 
         <div class="feat-img">
-          <img src="../assets/medaka/lineup.jpg" alt="フィッシュネットと産卵床のお楽しみセット">
+          <img src="../assets/medaka/lineup.jpg" alt="フィッシュネットと産卵床のセット">
+        </div>
+
+        <div class="feat-kin">
+          <p class="feat-kin-ttl">＋ 菌シリーズ</p>
+          <div class="feat-kin-imgs">
+            <img src="../assets/labels/label-nyusankin.jpg" alt="乳酸菌">
+            <img src="../assets/labels/label-zendama.jpg" alt="善玉菌">
+            <img src="../assets/labels/label-kougousei.jpg" alt="光合成細菌">
+          </div>
         </div>
 
         <ul class="feat-points">
           <li>丸い網30本・四角い網15本、あわせて45本がまとめて手に入ります</li>
           <li>容器ごとの使い分けや、予備の確保に</li>
           <li>産卵床も10こ。容器ごとに入れて、繁殖にも使えます</li>
+          <li>菌シリーズつき。水環境を整え、育てやすい環境づくりに</li>
         </ul>
 
         <div class="spec">
@@ -269,7 +285,7 @@
           <p class="spec-note">※ 色味・細かなデザイン、内容はロットごとに変更することがございます。<br>そのため「お楽しみセット」としてお届けしています。</p>
         </div>
 
-        <a href="https://mikasashoko.official.ec/items/151069600" class="btn btn-gold feat-cta" target="_blank" rel="noopener">お楽しみセットを購入する</a>
+        <a href="https://mikasashoko.official.ec/items/151069834" class="btn btn-gold feat-cta" target="_blank" rel="noopener">お楽しみ ＆ 菌セットを購入する</a>
         <p class="feat-note">BASEのショップページへ移動します</p>
       </div>
     </div>
@@ -284,14 +300,14 @@
 
       <div class="igrid">
 
-        <!-- 菌セット -->
+        <!-- お楽しみセット（単体） -->
         <article class="icard" style="--a:var(--c-set)">
-          <div class="icard-img"><img src="../assets/medaka/net-square.jpg" alt="フィッシュネット お楽しみ＆菌セット"></div>
+          <div class="icard-img"><img src="../assets/medaka/net-square.jpg" alt="フィッシュネット お楽しみセット"></div>
           <div class="icard-body">
-            <span class="icard-cat latin">Net &amp; Microbes</span>
-            <h3 class="icard-name">お楽しみ ＆ 菌セット</h3>
-            <p class="icard-desc">お楽しみセットに、三笠商行の菌シリーズを合わせた組み合わせ。すくう道具と、水まわりを整える菌を一度にそろえられます。</p>
-            <div class="icard-cta"><a href="https://mikasashoko.official.ec/items/151069834" class="btn-sm" target="_blank" rel="noopener">購入する</a></div>
+            <span class="icard-cat latin">Net Assortment</span>
+            <h3 class="icard-name">フィッシュネット<br>産卵床つき お楽しみセット</h3>
+            <p class="icard-desc">網45本と産卵床10こ。菌シリーズは不要で、道具だけまとめてそろえたい方はこちらを。</p>
+            <div class="icard-cta"><a href="https://mikasashoko.official.ec/items/151069600" class="btn-sm" target="_blank" rel="noopener">購入する</a></div>
           </div>
         </article>
 
