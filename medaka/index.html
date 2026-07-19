@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メダカ用品 ｜ 三笠商行</title>
+<meta name="description" content="メダカ・金魚のためのフィッシュネット、産卵床、めだかのごはん。三笠商行のメダカ用品。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#123A55;          /* 深い水の藍 */
+    --ink-2:#0B2739;
+    --gold:#B08A3E; --gold-lt:#CBA968; --gold-dk:#8A6A2A;
+    --paper:#F5EFE1; --paper-2:#EFE7D4;
+    --seal:#9E3B2E; --ink-text:#26201A;
+    --c-net:#2F7FB5;        /* ネット・青 */
+    --c-set:#C8622F;        /* お楽しみセット・朱橙 */
+    --c-food:#3F8F6B;       /* ごはん・緑 */
+    --serif:'Shippori Mincho B1', serif;
+    --gothic:'Zen Kaku Gothic New', sans-serif;
+    --latin:'Cormorant Garamond', serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--gothic);color:var(--ink-text);background:var(--paper);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .serif{font-family:var(--serif)} .latin{font-family:var(--latin);letter-spacing:.12em}
+
+  .topbar{background:var(--ink-2);color:var(--gold-lt);font-size:12.5px;padding:9px 24px 8px;border-bottom:1px solid rgba(203,169,104,.28);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .topbar-home{color:var(--gold-lt);text-decoration:none;font-family:var(--gothic);letter-spacing:.06em;transition:.2s}
+  .topbar-home:hover{color:var(--paper)}
+  .topbar-mid{font-family:var(--latin);letter-spacing:.3em;text-transform:uppercase}
+  @media(max-width:560px){.topbar{justify-content:center}.topbar-mid{display:none}}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;background:radial-gradient(120% 80% at 50% 0%, #1B5578 0%, var(--ink) 46%, var(--ink-2) 100%);color:var(--paper);padding:56px 0 66px;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;inset:18px;border:1px solid rgba(203,169,104,.36);pointer-events:none}
+  .hero::after{inset:24px;border-color:rgba(203,169,104,.16)}
+  .deco-corner{position:absolute;width:46px;height:46px;z-index:3}
+  .deco-corner span{position:absolute;background:var(--gold-lt);opacity:.85}
+  .hero .tl{top:18px;left:18px}.hero .tr{top:18px;right:18px}.hero .bl{bottom:18px;left:18px}.hero .br{bottom:18px;right:18px}
+  .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .kanban{display:flex;flex-direction:column;align-items:center;font-family:var(--serif);font-weight:800;font-size:clamp(40px,7.6vw,66px);line-height:1;color:var(--paper);padding:22px 20px;margin:6px 0;position:relative;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  .kanban span{display:block}
+  .kanban span+span{margin-top:.16em}
+  .kanban::before{content:"";position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:calc(100% + 8px);border-left:1px solid rgba(203,169,104,.5);border-right:1px solid rgba(203,169,104,.5)}
+  .hero-eyebrow{font-family:var(--latin);font-style:italic;font-size:clamp(16px,2.3vw,21px);color:var(--gold-lt);letter-spacing:.18em;margin-top:22px}
+  .hero-lead{font-family:var(--serif);font-weight:600;font-size:clamp(19px,3.4vw,28px);letter-spacing:.06em;margin-top:12px;color:#F3EAD8}
+  .hero-sub{max-width:580px;margin:18px auto 0;color:rgba(245,239,225,.82);font-size:15px}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+
+  .btn{font-family:var(--gothic);font-weight:700;font-size:15px;letter-spacing:.06em;padding:14px 30px;border-radius:2px;text-decoration:none;display:inline-block;transition:.2s ease;border:1.5px solid transparent}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-lt),var(--gold));color:#231a08;border-color:var(--gold-dk)}
+  .btn-gold:hover{filter:brightness(1.06);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--paper);border-color:rgba(203,169,104,.6)}
+  .btn-ghost:hover{background:rgba(203,169,104,.14)}
+
+  section{padding:76px 0}
+  .eyebrow{font-family:var(--latin);font-style:italic;font-size:18px;letter-spacing:.14em;color:var(--gold-dk);text-align:center;margin-bottom:6px}
+  .stitle{font-family:var(--serif);font-weight:700;text-align:center;font-size:clamp(24px,4vw,34px);letter-spacing:.08em;color:var(--ink);position:relative;padding-bottom:22px;margin-bottom:8px}
+  .stitle::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:64px;height:2px;background:var(--gold)}
+  .stitle .dot{display:inline-block;width:5px;height:5px;background:var(--seal);border-radius:50%;vertical-align:middle;margin:0 12px;transform:translateY(-6px)}
+  .slead{text-align:center;max-width:660px;margin:20px auto 0;color:#4B4237;font-size:15.5px}
+
+  /* ===== イチオシ：お楽しみセット ===== */
+  .featsec{background:var(--paper);padding:78px 0}
+  .featbox{position:relative;max-width:900px;margin:0 auto;background:linear-gradient(180deg,#fffdf7,#f6efdd);border:2px solid var(--gold);border-radius:8px;padding:52px 44px 46px;text-align:center;box-shadow:0 18px 44px rgba(120,95,40,.16)}
+  .featbox::before{content:"";position:absolute;inset:10px;border:1px solid rgba(176,138,62,.42);border-radius:5px;pointer-events:none}
+  .feat-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--seal);color:#F7EDDC;font-family:var(--serif);font-weight:700;font-size:14px;letter-spacing:.14em;padding:7px 26px;border-radius:2px;box-shadow:0 5px 14px rgba(0,0,0,.22);white-space:nowrap}
+  .feat-ttl{font-family:var(--serif);font-weight:800;font-size:clamp(24px,4.4vw,36px);letter-spacing:.08em;color:var(--ink);margin:4px 0 8px;position:relative;padding-bottom:20px;line-height:1.4}
+  .feat-ttl::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:70px;height:2px;background:var(--gold)}
+  .feat-lead{font-family:var(--serif);font-size:16.5px;line-height:1.9;letter-spacing:.04em;color:#3D362C;margin-top:18px}
+  .feat-img{margin:28px auto 24px;max-width:720px}
+  .feat-img img{width:100%;height:auto;display:block;border:1px solid rgba(176,138,62,.45);border-radius:4px;background:#fff;box-shadow:0 8px 20px rgba(90,70,30,.14)}
+  .feat-points{list-style:none;max-width:600px;margin:0 auto;text-align:left}
+  .feat-points li{position:relative;padding-left:24px;margin-top:11px;font-size:14.5px;color:#463d31;line-height:1.8}
+  .feat-points li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+  .feat-cta{margin-top:32px;font-size:16.5px;padding:17px 46px}
+  .feat-note{margin-top:12px;font-size:12.5px;color:#7a6f5c;letter-spacing:.04em}
+
+  .bignum{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;margin:26px auto 4px;padding:18px 20px;border-top:1px solid rgba(176,138,62,.4);border-bottom:1px solid rgba(176,138,62,.4);max-width:560px}
+  .bignum-item{display:flex;align-items:baseline;gap:6px}
+  .bignum-lead{font-family:var(--serif);font-size:18px;letter-spacing:.06em;color:var(--ink)}
+  .bignum-fig{font-family:var(--serif);font-weight:800;font-size:clamp(48px,9vw,68px);line-height:.9;color:var(--seal);letter-spacing:.02em}
+  .bignum-unit{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink)}
+  .bignum-x{font-family:var(--serif);font-size:22px;color:var(--gold-dk)}
+  @media(max-width:480px){.bignum{gap:8px;padding:16px 12px}}
+
+  .spec{max-width:620px;margin:30px auto 0;background:#fdfaf1;border:1px solid rgba(176,138,62,.45);border-radius:5px;padding:26px 28px 22px;text-align:left}
+  .spec-ttl{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.1em;color:var(--ink);text-align:center;padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid rgba(176,138,62,.32)}
+  .spec-group{margin-top:18px}
+  .spec-group h4{font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.05em;color:var(--c-net);margin-bottom:6px}
+  .spec-group h4 small{font-family:var(--gothic);font-weight:400;font-size:12px;color:#8a7c62;letter-spacing:.02em;margin-left:6px}
+  .spec dl div{display:flex;align-items:baseline;gap:10px;padding:5px 0;border-bottom:1px dotted rgba(176,138,62,.32);font-size:13.5px}
+  .spec dl div:last-child{border-bottom:none}
+  .spec dt{font-family:var(--serif);font-weight:700;color:var(--ink);min-width:1.6em;flex-shrink:0}
+  .spec dd{color:#463d31;flex:1}
+  .spec dd.qty{flex:0 0 auto;font-family:var(--serif);font-weight:700;color:var(--seal);letter-spacing:.04em}
+  .spec-note{margin-top:16px;font-size:12px;color:#7a6f5c;line-height:1.75}
+  @media(max-width:520px){.spec{padding:22px 18px 18px}.spec dl div{flex-wrap:wrap;gap:6px}}
+
+  /* ===== 商品一覧 ===== */
+  .items{background:var(--ink);color:var(--paper)}
+  .items .eyebrow{color:var(--gold-lt)} .items .stitle{color:var(--paper)} .items .slead{color:rgba(245,239,225,.8)}
+  .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .icard{background:var(--paper);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px rgba(0,0,0,.28);border-top:3px solid var(--a);transition:transform .22s ease, box-shadow .22s ease}
+  .icard:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(0,0,0,.36)}
+  .icard-img{background:#fff;padding:16px;border-bottom:1px solid #ece3cf;display:flex;align-items:center;justify-content:center;min-height:180px}
+  .icard-img img{width:100%;height:auto;display:block;border-radius:3px}
+  .icard-ph{width:100%;min-height:148px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(160deg,#f7f4ea,#eee7d5);border:1px dashed rgba(176,138,62,.5);border-radius:3px;color:var(--a)}
+  .icard-ph svg{width:44px;height:44px;stroke:currentColor;fill:none;stroke-width:1.3}
+  .icard-ph span{font-family:var(--serif);font-size:13px;letter-spacing:.08em;color:#8a7c62}
+  .icard-body{padding:22px 22px 26px;color:var(--ink-text);display:flex;flex-direction:column;flex:1}
+  .icard-cat{font-family:var(--latin);font-style:italic;font-size:13.5px;letter-spacing:.1em;color:var(--a);font-weight:600}
+  .icard-name{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.04em;margin:3px 0 12px;color:var(--ink);line-height:1.5}
+  .icard-desc{font-size:13.5px;color:#544b3f;flex:1;line-height:1.85}
+  .icard-cta{margin-top:20px}
+  .icard .btn-sm{font-size:13.5px;padding:11px 0;width:100%;text-align:center;background:var(--a);color:#fff;border-radius:2px;font-family:var(--gothic);font-weight:700;letter-spacing:.05em;transition:.2s;text-decoration:none;display:block}
+  .icard .btn-sm:hover{filter:brightness(1.09)}
+
+  /* ===== セットの中身 ===== */
+  .detail{background:var(--paper-2)}
+  .dgrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:50px}
+  .dcard{background:#fffdf7;border:1px solid rgba(176,138,62,.45);border-radius:5px;overflow:hidden;box-shadow:0 6px 18px rgba(120,95,40,.09)}
+  .dcard-img{background:#fff;padding:18px;border-bottom:1px solid #ece3cf}
+  .dcard-img img{width:100%;height:auto;display:block}
+  .dcard-body{padding:24px 26px 28px}
+  .dcard h3{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.05em;color:var(--ink);margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(176,138,62,.28)}
+  .dcard p{font-size:14px;color:#463d31;line-height:1.85}
+  .dcard ul{list-style:none;margin-top:10px}
+  .dcard li{position:relative;padding-left:20px;margin-top:8px;font-size:13.5px;color:#463d31}
+  .dcard li::before{content:"";position:absolute;left:3px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--c-net)}
+  .dnote{text-align:center;margin-top:28px;font-size:13px;color:#6b6151}
+
+  /* ===== 菌シリーズへの導線 ===== */
+  .cross{background:var(--paper)}
+  .crossbox{max-width:820px;margin:0 auto;background:linear-gradient(150deg,#1C4038,#16332C);border-radius:6px;padding:44px 40px;text-align:center;color:var(--paper);position:relative;box-shadow:0 14px 34px rgba(0,0,0,.2)}
+  .crossbox::before{content:"";position:absolute;inset:10px;border:1px solid rgba(203,169,104,.35);border-radius:4px;pointer-events:none}
+  .crossbox h3{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3.4vw,26px);letter-spacing:.06em;margin-bottom:14px}
+  .crossbox p{color:rgba(245,239,225,.84);font-size:14.5px;max-width:540px;margin:0 auto}
+  .crossbox .btn{margin-top:26px}
+
+  /* ===== CTA ===== */
+  .cta{background:radial-gradient(120% 90% at 50% 0%, #1B5578, var(--ink) 55%, var(--ink-2));color:var(--paper);text-align:center;position:relative}
+  .cta::before{content:"";position:absolute;inset:20px;border:1px solid rgba(203,169,104,.3);pointer-events:none}
+  .cta .stitle{color:var(--paper)} .cta .stitle::after{background:var(--gold-lt)}
+  .cta .eyebrow{color:var(--gold-lt)}
+  .cta p{max-width:540px;margin:18px auto 0;color:rgba(245,239,225,.82);font-size:15px}
+
+  footer{background:var(--ink-2);color:rgba(245,239,225,.7);padding:44px 0 40px;text-align:center}
+  .foot-mark{font-family:var(--serif);font-weight:800;font-size:26px;letter-spacing:.16em;color:var(--paper)}
+  .foot-mk{font-family:var(--latin);letter-spacing:.42em;font-size:12px;color:var(--gold-lt);margin-top:6px}
+  .foot-nav{margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  .foot-nav a{color:rgba(245,239,225,.78);text-decoration:none;font-size:13.5px;letter-spacing:.06em;transition:.2s}
+  .foot-nav a:hover{color:var(--gold-lt)}
+  .foot-line{width:40px;height:1px;background:rgba(203,169,104,.4);margin:22px auto}
+  .foot-note{font-size:12.5px;letter-spacing:.06em}
+
+  @media(max-width:860px){
+    .igrid{grid-template-columns:1fr;max-width:420px;margin:44px auto 0}
+    .dgrid{grid-template-columns:1fr;max-width:460px;margin:44px auto 0}
+  }
+  @media(max-width:640px){
+    .featbox{padding:46px 22px 38px}
+    .feat-cta{width:100%;padding:16px 0}
+  }
+  @media(max-width:520px){section{padding:60px 0}.wrap{padding:0 20px}.hero{padding:44px 0 52px}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="../" class="topbar-home">← 三笠商行 トップ</a>
+    <span class="topbar-mid">Mikasa Trading Co. &nbsp;·&nbsp; For Medaka</span>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <span class="deco-corner tl"><span style="top:0;left:0;width:24px;height:2px"></span><span style="top:0;left:0;width:2px;height:24px"></span></span>
+    <span class="deco-corner tr"><span style="top:0;right:0;width:24px;height:2px"></span><span style="top:0;right:0;width:2px;height:24px"></span></span>
+    <span class="deco-corner bl"><span style="bottom:0;left:0;width:24px;height:2px"></span><span style="bottom:0;left:0;width:2px;height:24px"></span></span>
+    <span class="deco-corner br"><span style="bottom:0;right:0;width:24px;height:2px"></span><span style="bottom:0;right:0;width:2px;height:24px"></span></span>
+    <div class="wrap hero-inner">
+      <div class="kanban serif"><span>メ</span><span>ダ</span><span>カ</span><span>用</span><span>品</span></div>
+      <div class="hero-eyebrow latin">For Medaka &amp; Goldfish</div>
+      <h1 class="hero-lead">育てる人の、道具です。</h1>
+      <p class="hero-sub">たくさん飼育されている方、販売されている方へ。毎日つかうものだからこそ、まとめてそろう形でご用意しました。</p>
+      <div class="hero-cta">
+        <a href="#feature" class="btn btn-gold">お楽しみセットを見る</a>
+        <a href="#items" class="btn btn-ghost">商品一覧</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= イチオシ ================= -->
+  <section class="featsec" id="feature">
+    <div class="wrap">
+      <div class="featbox">
+        <span class="feat-badge">イチオシ</span>
+
+        <p class="eyebrow" style="margin-top:6px">Fun Assortment</p>
+        <h2 class="feat-ttl">めだか・金魚<br>フィッシュネット 産卵床つき<br>お楽しみセット</h2>
+        <p class="feat-lead">たくさん飼育されている方、販売されている方へ。<br>サイズ違いのフィッシュネットと産卵床を、まとめてお届けします。</p>
+
+        <div class="bignum">
+          <span class="bignum-item">
+            <span class="bignum-lead">網</span>
+            <span class="bignum-fig">45</span>
+            <span class="bignum-unit">本</span>
+          </span>
+          <span class="bignum-x">＋</span>
+          <span class="bignum-item">
+            <span class="bignum-lead">産卵床</span>
+            <span class="bignum-fig">10</span>
+            <span class="bignum-unit">こ</span>
+          </span>
+        </div>
+
+        <div class="feat-img">
+          <img src="../assets/medaka/lineup.jpg" alt="フィッシュネットと産卵床のお楽しみセット">
+        </div>
+
+        <ul class="feat-points">
+          <li>丸い網30本・四角い網15本、あわせて45本がまとめて手に入ります</li>
+          <li>容器ごとの使い分けや、予備の確保に</li>
+          <li>産卵床も10こ。容器ごとに入れて、繁殖にも使えます</li>
+        </ul>
+
+        <div class="spec">
+          <p class="spec-ttl">セット例</p>
+
+          <div class="spec-group">
+            <h4>まるい網 <small>計30本</small></h4>
+            <dl>
+              <div><dt>大</dt><dd>網の直径 11.5cm</dd><dd class="qty">10こ</dd></div>
+              <div><dt>中</dt><dd>網の直径 9.5cm</dd><dd class="qty">10こ</dd></div>
+              <div><dt>小</dt><dd>網の直径 7.5cm</dd><dd class="qty">10こ</dd></div>
+            </dl>
+          </div>
+
+          <div class="spec-group">
+            <h4>四角い網 <small>サイズ違い 5本セット</small></h4>
+            <dl>
+              <div><dt></dt><dd>横25cm × 縦18cm</dd><dd class="qty">1こ</dd></div>
+              <div><dt></dt><dd>横20cm × 縦15cm</dd><dd class="qty">1こ</dd></div>
+              <div><dt></dt><dd>横15cm × 縦12cm</dd><dd class="qty">1こ</dd></div>
+              <div><dt></dt><dd>横13cm × 縦10.5cm</dd><dd class="qty">1こ</dd></div>
+              <div><dt></dt><dd>横8cm × 縦6cm</dd><dd class="qty">1こ</dd></div>
+            </dl>
+          </div>
+
+          <div class="spec-group">
+            <h4>四角い網 <small>同サイズ 10本入り</small></h4>
+            <dl>
+              <div><dt></dt><dd>横10cm × 縦7.5cm</dd><dd class="qty">10こ</dd></div>
+            </dl>
+          </div>
+
+          <div class="spec-group">
+            <h4>産卵床 <small>計10こ</small></h4>
+            <dl>
+              <div><dt></dt><dd>直径 4.2cm ／ 高さ 10cm</dd><dd class="qty">10こ</dd></div>
+            </dl>
+          </div>
+
+          <p class="spec-note">※ 色味・細かなデザイン、内容はロットごとに変更することがございます。<br>そのため「お楽しみセット」としてお届けしています。</p>
+        </div>
+
+        <a href="https://mikasashoko.official.ec/items/151069600" class="btn btn-gold feat-cta" target="_blank" rel="noopener">お楽しみセットを購入する</a>
+        <p class="feat-note">BASEのショップページへ移動します</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 商品一覧 ================= -->
+  <section class="items" id="items">
+    <div class="wrap">
+      <p class="eyebrow">Line Up</p>
+      <h2 class="stitle">商品一覧</h2>
+      <p class="slead">ネットのセットと、めだかのごはん。飼育の規模に合わせてお選びください。</p>
+
+      <div class="igrid">
+
+        <!-- 菌セット -->
+        <article class="icard" style="--a:var(--c-set)">
+          <div class="icard-img"><img src="../assets/medaka/net-square.jpg" alt="フィッシュネット お楽しみ＆菌セット"></div>
+          <div class="icard-body">
+            <span class="icard-cat latin">Net &amp; Microbes</span>
+            <h3 class="icard-name">お楽しみ ＆ 菌セット</h3>
+            <p class="icard-desc">お楽しみセットに、三笠商行の菌シリーズを合わせた組み合わせ。すくう道具と、水まわりを整える菌を一度にそろえられます。</p>
+            <div class="icard-cta"><a href="https://mikasashoko.official.ec/items/151069834" class="btn-sm" target="_blank" rel="noopener">購入する</a></div>
+          </div>
+        </article>
+
+        <!-- ごはん -->
+        <article class="icard" style="--a:var(--c-food)">
+          <div class="icard-img">
+            <!-- TODO: 餌の商品写真が用意できたら img に差し替え -->
+            <div class="icard-ph">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13c3-4 7-5 10-2 1.6 1.6 2.2 3.4 2.2 3.4s-2 1.4-4.4 1.2C7.6 15.3 5 14.4 3 13z"/>
+                <path d="M15.2 14.4l4-2.6M15.2 14.4l4 2.2M8 12.4h.01"/>
+              </svg>
+              <span>めだかのごはん</span>
+            </div>
+          </div>
+          <div class="icard-body">
+            <span class="icard-cat latin">Daily Food</span>
+            <h3 class="icard-name">めだかのおいしいごはん<br>100グラム</h3>
+            <p class="icard-desc">毎日の食事に。使いきりやすい100グラム入りです。</p>
+            <div class="icard-cta"><a href="https://mikasashoko.official.ec/items/151069951" class="btn-sm" target="_blank" rel="noopener">購入する</a></div>
+          </div>
+        </article>
+
+        <!-- ごはん10個セット -->
+        <article class="icard" style="--a:var(--c-food)">
+          <div class="icard-img">
+            <!-- TODO: 餌の商品写真が用意できたら img に差し替え -->
+            <div class="icard-ph">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.5" y="8" width="7" height="8" rx="1"/><rect x="13.5" y="8" width="7" height="8" rx="1"/>
+                <path d="M3.5 11h7M13.5 11h7"/>
+              </svg>
+              <span>10個セット</span>
+            </div>
+          </div>
+          <div class="icard-body">
+            <span class="icard-cat latin">Value Pack</span>
+            <h3 class="icard-name">めだかのおいしいごはん<br>100グラム 10個セット</h3>
+            <p class="icard-desc">多頭飼育の方、長く続けたい方へのまとめ買い用です。</p>
+            <div class="icard-cta"><a href="https://mikasashoko.official.ec/items/151069974" class="btn-sm" target="_blank" rel="noopener">購入する</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= セットの中身 ================= -->
+  <section class="detail">
+    <div class="wrap">
+      <p class="eyebrow">What's Inside</p>
+      <h2 class="stitle">セットの<span class="dot"></span>中身</h2>
+      <p class="slead">セットに入っているものをご紹介します。</p>
+
+      <div class="dgrid">
+        <div class="dcard">
+          <div class="dcard-img"><img src="../assets/medaka/net-round.jpg" alt="丸型フィッシュネット"></div>
+          <div class="dcard-body">
+            <h3>フィッシュネット</h3>
+            <p>角型と丸型、大小さまざまなサイズをご用意しています。</p>
+            <ul>
+              <li>角型は水槽の隅までしっかり届きます</li>
+              <li>丸型は水の抵抗が少なく、やさしくすくえます</li>
+              <li>小さいサイズは稚魚に、大きいサイズは金魚にも</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dcard">
+          <div class="dcard-img"><img src="../assets/medaka/sanranshou.jpg" alt="産卵床"></div>
+          <div class="dcard-body">
+            <h3>産卵床</h3>
+            <p>メダカが卵を産みつけるための床です。浮きがついているので、水に浮かべてそのまま使えます。</p>
+            <ul>
+              <li>卵がついたら取り出して、別容器へ移せます</li>
+              <li>繁殖させたい方に</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="dnote">※ お楽しみセットの内容は、入荷状況により変わることがあります。</p>
+    </div>
+  </section>
+
+  <!-- ================= 菌シリーズへ ================= -->
+  <section class="cross">
+    <div class="wrap">
+      <div class="crossbox">
+        <h3>水まわりを整える、菌シリーズもあります</h3>
+        <p>飼育数が多いほど、水の管理は手間になります。三笠商行では水質を保つのに役立つ菌シリーズも扱っています。まとめて試すなら「お楽しみ ＆ 菌セット」をどうぞ。</p>
+        <a href="../kin/" class="btn btn-gold">菌シリーズを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Shop &amp; Contact</p>
+      <h2 class="stitle">お買い求めはこちらから</h2>
+      <p>ご購入はBASEのショップページから。卸・お取扱いのご相談も承ります。</p>
+      <div class="hero-cta">
+        <a href="https://mikasashoko.official.ec" class="btn btn-gold" target="_blank" rel="noopener">ショップを見る</a>
+        <a href="#items" class="btn btn-ghost">商品一覧に戻る</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-mark serif">三笠商行</div>
+      <div class="foot-mk latin">MIKASA TRADING CO.</div>
+      <nav class="foot-nav">
+        <a href="../">トップ</a>
+        <a href="../kin/">菌シリーズ</a>
+        <a href="./">メダカ用品</a>
+        <a href="https://mikasashoko.official.ec" target="_blank" rel="noopener">ショップ</a>
+      </nav>
+      <div class="foot-line"></div>
+      <p class="foot-note">© 三笠商行</p>
+    </div>
+  </footer>
+
+</body>
+</html>
